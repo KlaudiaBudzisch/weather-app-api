@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+</head>
+
+<body>
+
+    <main hidden>
+
+        <!-- menu -->
+        <section class="menu-container">
+            <div class="location-container">
+                <input type="text" placeholder="choose your location" id="location-input">
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+        </section>
+
+        <!-- current weather -->
+        <section class="current-weather-container">
+            <h1 class="location-label">Sun Valley</h1>
+
+            <div class="flex-container" id="current-forecast">
+                <div>
+                    <img src="weather-icons/partly-cloudy-night.png" alt="Summary Icon" id="currentlyIcon">
+                </div>
+                <div>
+                    <h1 id="degrees-label">26&#176;</h1>
+                    <p id="text-summary-label">partly cloudy</p>
+                </div>
+            </div>
+
+
+            <div class="labels-box">
+                <img class="humidity" src="icons/humidity.png" alt="humidity">
+                <span id="humidity" class="text-info">19%</span>
+
+                <img class="wind" src="icons/wind-speed-flag.png" alt="wind speed">
+                <span id="wind-speed" class="text-info">10 k/h</span>
+
+                <span id="wind-bearing" class="text-info">↗ NE</span>
+
+                <img class="pressure" src="icons/pressure.png" alt="pressure">
+                <span id="pressure" class="text-info">1024 hPa</span>
+            </div>
+
+
+        </section>
+
+        <!-- forecast for the next days  -->
+        <section class="daily-weather-forecast">
+
+            <div id="daily-weather" class="daily-weather-container">
+                <div class="flex-container weather-box display-none">
+                    <div>
+                        <h3></h3>
+                    </div>
+                    <div class="flex-container">
+                        <div>
+                            <p></p>
+                        </div>
+                        <div>
+                            <img class="daily-icon" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="code.js"></script>
+</body>
+
+</html>
